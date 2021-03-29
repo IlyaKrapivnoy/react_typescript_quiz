@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
+// Components
+import QuestionCard from './components/QuestionCard'
 
 const App = () => {
+  
+
+
 
   const startTrivia = async () => {
 
@@ -25,6 +30,13 @@ const App = () => {
       </button>
       <p className="score">Score:</p>
       <p>Loading Question...</p>
+      <QuestionCard />
+      <button 
+        className="next"
+        onClick={nextQuestion}
+      >
+        Next Question
+      </button>
     </div>
   );
 }
